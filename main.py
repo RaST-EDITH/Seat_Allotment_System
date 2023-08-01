@@ -6,6 +6,13 @@ from tabulate import tabulate
 from PIL import Image ,ImageTk
 from tkinter.messagebox import showerror
 
+def Imgo(file,w,h) :
+
+    # Image processing
+    img=Image.open(file)
+    pht=ImageTk.PhotoImage(img.resize((w,h), Image.Resampling.LANCZOS ))
+    return pht
+
 def firstpage() :
 
     global user,pwrd,frpa
