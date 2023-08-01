@@ -6,6 +6,16 @@ from tabulate import tabulate
 from PIL import Image ,ImageTk
 from tkinter.messagebox import showerror
 
+def firstpage() :
+
+    global user,pwrd,frpa
+
+    # Defining Structure
+    frpa=Canvas( root, width = wid, height = hgt, bg = "black", highlightcolor = "#3c5390", borderwidth = 0 )
+    frpa.pack( fill = "both", expand = True )
+
+    root.mainloop()
+
 if __name__ == "__main__" :
 
     # Defining Main theme of all widgets
