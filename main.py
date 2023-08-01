@@ -6,16 +6,18 @@ from tabulate import tabulate
 from PIL import Image ,ImageTk
 from tkinter.messagebox import showerror
 
-# Defining Main theme of all widgets
-ctk.set_appearance_mode("dark")
-ctk.set_default_color_theme("dark-blue")
-wid = 1350
-hgt = 650
+if __name__ == "__main__" :
 
-global root
-root=ctk.CTk()
-root.title("JSS Counselling System")
-root.iconbitmap("icon.ico")
-root.geometry("1350x650+100+80")
-root.resizable(False,False)
-firstpage()
+    # Defining Main theme of all widgets
+    ctk.set_appearance_mode("dark")
+    ctk.set_default_color_theme("dark-blue")
+    wid = 1350
+    hgt = 650
+
+    global root
+    root=ctk.CTk()
+    root.title("JSS Counselling System")
+    root.iconbitmap("icon.ico")
+    root.geometry("1350x650+100+80")
+    root.resizable(False,False)
+    firstpage()
