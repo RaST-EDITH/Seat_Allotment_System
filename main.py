@@ -14,6 +14,16 @@ def firstpage() :
     frpa=Canvas( root, width = wid, height = hgt, bg = "black", highlightcolor = "#3c5390", borderwidth = 0 )
     frpa.pack( fill = "both", expand = True )
 
+    # Image on top
+    jss_image = Imgo("jss.png", 135, 135)
+    # Background Image
+    back_image = Imgo("front2a.jpg", 1700, 810)
+    entry_image = Imgo("front22.png", 550, 370)
+    frpa.create_image( 0, 0, image = back_image , anchor = "nw")
+    frpa.create_image(30, 20, image = jss_image, anchor = "nw")
+    frpa.create_image(750, 150, image = entry_image, anchor = "nw")
+    frpa.create_image(750, 350, image = entry_image, anchor = "nw")
+
     root.mainloop()
 
 if __name__ == "__main__" :
