@@ -31,6 +31,12 @@ def firstpage() :
     frpa.create_image(750, 150, image = entry_image, anchor = "nw")
     frpa.create_image(750, 350, image = entry_image, anchor = "nw")
 
+    # Heading
+    frpa.create_text(915,80,text="JSS ACADEMY OF TECHNICAL EDUCATION, NOIDA",font=("Book Antiqua",34,"bold"),fill="red")
+    frpa.create_text(1025,180,text="JSS ADMISSION",font=("Book Antiqua",28,"bold"),fill="#0b4bf5")##0b4bf5
+    frpa.create_text(970,305,text="Username",font=("Book Antiqua",22,"bold"),fill="white")
+    frpa.create_text(970,505,text="Password",font=("Book Antiqua",22,"bold"),fill="white")
+
     root.mainloop()
 
 if __name__ == "__main__" :
