@@ -1,3 +1,4 @@
+import os
 from tkinter import *
 import openpyxl as oxl
 from tkinter import ttk
@@ -22,10 +23,10 @@ def firstpage() :
     frpa.pack( fill = "both", expand = True )
 
     # Image on top
-    jss_image = Imgo("jss.png", 135, 135)
+    jss_image = Imgo(os.path.join( os.getcwd(), "Images\\jss.png"), 135, 135)
     # Background Image
-    back_image = Imgo("front2a.jpg", 1700, 810)
-    entry_image = Imgo("front22.png", 550, 370)
+    back_image = Imgo(os.path.join( os.getcwd(), "Background\\front2a.jpg"), 1700, 810)
+    entry_image = Imgo(os.path.join( os.getcwd(), "Images\\front22.png"), 550, 370)
     frpa.create_image( 0, 0, image = back_image , anchor = "nw")
     frpa.create_image(30, 20, image = jss_image, anchor = "nw")
     frpa.create_image(750, 150, image = entry_image, anchor = "nw")
@@ -70,7 +71,7 @@ if __name__ == "__main__" :
     global root
     root=ctk.CTk()
     root.title("JSS Counselling System")
-    root.iconbitmap("icon.ico")
+    root.iconbitmap(os.path.join( os.getcwd(), "Images\\icon.ico"))
     root.geometry("1350x650+100+80")
     root.resizable(False,False)
     firstpage()
