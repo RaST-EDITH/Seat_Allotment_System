@@ -14,6 +14,12 @@ def Imgo(file,w,h) :
     pht=ImageTk.PhotoImage(img.resize((w,h), Image.Resampling.LANCZOS ))
     return pht
 
+def change(can,page) :
+
+    # Switching canvas
+    can.destroy()
+    page()
+
 def nxt_widg():
 
     # Moving to second page
