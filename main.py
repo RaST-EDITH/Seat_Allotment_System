@@ -14,6 +14,15 @@ def Imgo(file,w,h) :
     pht=ImageTk.PhotoImage(img.resize((w,h), Image.Resampling.LANCZOS ))
     return pht
 
+def nxt_widg():
+
+    # Moving to second page
+    app_no , pw_dob = user.get() , pwrd.get()
+    if  compare_rec(app_no, pw_dob) == True :
+        change(frpa, secondpage)
+    else :
+        hel()
+
 def firstpage() :
 
     global user,pwrd,frpa
