@@ -20,6 +20,11 @@ def change(can,page) :
     can.destroy()
     page()
 
+def hel() :
+
+    # Pop up window
+    showerror(title="Info",message="INVALID ENTRY")
+
 def nxt_widg():
 
     # Moving to second page
