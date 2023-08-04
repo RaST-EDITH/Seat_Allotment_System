@@ -25,6 +25,11 @@ def hel() :
     # Pop up window
     showerror(title="Info",message="INVALID ENTRY")
 
+def not_allow() :
+
+    # Pop up window
+    showerror(title="Info",message="SLOT FULL")
+
 def nxt_widg():
 
     # Moving to second page
