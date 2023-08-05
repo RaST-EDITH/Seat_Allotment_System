@@ -30,6 +30,14 @@ def not_allow() :
     # Pop up window
     showerror(title="Info",message="SLOT FULL")
 
+def ent_clr(e) :
+    if user.get() == "Roll Number"  :
+        user.delete(0,END)
+
+def ent_clr1(e) :
+    if  pwrd.get() == "DOB(dd/mm/yyyy)" :
+        pwrd.delete(0,END)
+
 def nxt_widg():
 
     # Moving to second page
