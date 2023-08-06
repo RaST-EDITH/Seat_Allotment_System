@@ -38,6 +38,16 @@ def ent_clr1(e) :
     if  pwrd.get() == "DOB(dd/mm/yyyy)" :
         pwrd.delete(0,END)
 
+def ent_place(e) :
+    if user.get()=='' :
+        user.insert(0, "Roll Number")
+
+def ent_place1(e) :
+    if pwrd.get()=='' :
+        pwrd.insert(0, "DOB(dd/mm/yyyy)")
+    # else :
+    #     pwrd.config(show="*")
+
 def nxt_widg():
 
     # Moving to second page
