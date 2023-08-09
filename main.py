@@ -61,6 +61,9 @@ def secondpage():
 
     global scpa
 
+    # Data managing
+    wb=oxl.load_workbook("student_data.xlsx")
+    ws=wb["Sheet1"]
     scpa=Canvas(root,width=1560,height=810,borderwidth=0)
     scpa.pack(fill="both",expand=True)
 
@@ -73,6 +76,7 @@ def secondpage():
 
     # Welocome Text
     scpa.create_text( 220, 100-10, text="Welcome ,", font=("Book Antiqua",26,"bold"), anchor="nw", fill="#ff512a")
+    scpa.create_text( 460, 80-10, text=ws[f"C{rec}"].value, font=("Book Antiqua",38,"bold"), anchor="nw", fill="#ff512a")
 
     root.mainloop()
 
