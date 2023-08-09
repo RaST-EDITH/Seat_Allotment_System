@@ -62,16 +62,16 @@ def secondpage():
     global scpa
 
     # Data managing
-    wb=oxl.load_workbook("student_data.xlsx")
+    wb=oxl.load_workbook( os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx") )
     ws=wb["Sheet1"]
     scpa=Canvas(root,width=1560,height=810,borderwidth=0)
     scpa.pack(fill="both",expand=True)
 
     # JSS logo image
-    jss_image=Imgo("jss.png",160,140)
+    jss_image=Imgo( os.path.join( os.getcwd(), "Images\\jss.png"),160,140)
 
     # Background Image
-    back2_image=Imgo("front2b.jpg",1700,810)
+    back2_image=Imgo( os.path.join( os.getcwd(), "Background\\front2b.jpg"),1700,810)
     scpa.create_image(0,0,image=back2_image,anchor="nw")
 
     # Welocome Text
