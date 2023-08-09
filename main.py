@@ -57,6 +57,25 @@ def nxt_widg():
     else :
         hel()
 
+def secondpage():
+
+    global scpa
+
+    scpa=Canvas(root,width=1560,height=810,borderwidth=0)
+    scpa.pack(fill="both",expand=True)
+
+    # JSS logo image
+    jss_image=Imgo("jss.png",160,140)
+
+    # Background Image
+    back2_image=Imgo("front2b.jpg",1700,810)
+    scpa.create_image(0,0,image=back2_image,anchor="nw")
+
+    # Welocome Text
+    scpa.create_text( 220, 100-10, text="Welcome ,", font=("Book Antiqua",26,"bold"), anchor="nw", fill="#ff512a")
+
+    root.mainloop()
+
 def firstpage() :
 
     global user,pwrd,frpa
