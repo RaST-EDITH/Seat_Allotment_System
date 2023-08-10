@@ -78,6 +78,13 @@ def secondpage():
     scpa.create_text( 220, 100-10, text="Welcome ,", font=("Book Antiqua",26,"bold"), anchor="nw", fill="#ff512a")
     scpa.create_text( 460, 80-10, text=ws[f"C{rec}"].value, font=("Book Antiqua",38,"bold"), anchor="nw", fill="#ff512a")
 
+    # Profile page window
+    pro=Imgo("profile.jpg",220,170)
+    pro_bt=ctk.CTkButton(master=root,image=pro, text="Profile", text_font=("Book Antiqua",22,"bold"), compound="top",
+                         corner_radius=10, bg_color="#fafafa", fg_color="#2d435b", hover_color="#fdbf38", text_color="white",
+                         width=230, height=200, border_width=0, command= lambda : change(scpa,propage))
+    pro_bt_win=scpa.create_window(420,200-10,anchor="nw",window=pro_bt)
+
     root.mainloop()
 
 def firstpage() :
