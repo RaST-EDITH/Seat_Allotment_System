@@ -30,6 +30,25 @@ def not_allow() :
     # Pop up window
     showerror(title="Info",message="SLOT FULL")
 
+def compare_rec(app_no,pw_dob) :
+
+    # Comparing ID and password
+    global rec
+    wb=oxl.load_workbook( os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx") )
+    ws=wb["Sheet1"]
+    for i in range(2,ws.max_row+1) :
+        flag=0
+        x=ws[f"B{i}"]
+        y=ws[f"L{i}"]
+        if app_no == str(x.value) and pw_dob == y.value :
+            flag=1
+            rec=i
+            break
+    if flag==1 :
+        return True
+    else :
+        return False
+
 def nxt_widg():
 
     # Moving to second page
@@ -61,7 +80,7 @@ def secondpage():
     scpa.create_text( 460, 80-10, text=ws[f"C{rec}"].value, font=("Book Antiqua",38,"bold"), anchor="nw", fill="#ff512a")
 
     # Profile page window
-    pro=Imgo("profile.jpg",220,170)
+    pro=Imgo( os.path.join( os.getcwd(), "Images\\profile.jpg"),220,170)
     pro_bt=ctk.CTkButton(master=root,image=pro, text="Profile", text_font=("Book Antiqua",22,"bold"), compound="top",
                          corner_radius=10, bg_color="#fafafa", fg_color="#2d435b", hover_color="#fdbf38", text_color="white",
                          width=230, height=200, border_width=0, command= lambda : change(scpa,propage))
