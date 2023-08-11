@@ -45,16 +45,8 @@ def compare_rec(app_no,pw_dob) :
             rec=i
             break
     if flag==1 :
-        return True
-    else :
-        return False
-
-def nxt_widg():
-
-    # Moving to second page
-    app_no , pw_dob = user.get() , pwrd.get()
-    if  compare_rec(app_no, pw_dob) == True :
         change(frpa, secondpage)
+
     else :
         hel()
 
@@ -132,7 +124,7 @@ def firstpage() :
     # Login button
     log_bt=ctk.CTkButton(master=root, text="Login", text_font=("Book Antiqua",25,"bold"), width=30, height=20,
                          corner_radius=15, text_color="white", bg_color="#dadada", fg_color="#162d50", 
-                         hover_color="#0c3f8c", border_width=0, command = nxt_widg)
+                         hover_color="#0c3f8c", border_width=0, command = lambda : compare_rec( user.get(), pwrd.get()) )
     log_bt_win=frpa.create_window(960,675,anchor="nw",window=log_bt)
 
     root.mainloop()
