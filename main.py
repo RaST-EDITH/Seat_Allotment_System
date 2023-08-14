@@ -78,6 +78,13 @@ def secondpage():
                          width=230, height=200, border_width=0, command= lambda : change(scpa,propage))
     pro_bt_win=scpa.create_window(420,200-10,anchor="nw",window=pro_bt)
 
+    # Slot page window
+    slot=Imgo( os.path.join( os.getcwd(), "Images\\clo.png"),220,170)
+    slot_bt=ctk.CTkButton(master=root,image=slot, text="Slot Booking", text_font=("Book Antiqua",22,"bold"), compound="top",
+                         corner_radius=10, bg_color="#fafafa", fg_color="#2d435b", hover_color="#fdbf38", text_color="white",
+                         width=230, height=200, border_width=0, command= lambda : change(scpa,slotpage))
+    slot_bt_win=scpa.create_window(740,200-10,anchor="nw",window=slot_bt)
+
     root.mainloop()
 
 def firstpage() :
