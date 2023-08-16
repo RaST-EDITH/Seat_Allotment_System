@@ -85,6 +85,13 @@ def secondpage():
                          width=230, height=200, border_width=0, command= lambda : change(scpa,slotpage))
     slot_bt_win=scpa.create_window(740,200-10,anchor="nw",window=slot_bt)
 
+    # Document page window
+    doc=Imgo( os.path.join( os.getcwd(), "Images\\doc_img2.png"),220,170)
+    doc_bt=ctk.CTkButton(master=root,image=doc, text="Documents", text_font=("Book Antiqua",22,"bold"), compound="top",
+                         corner_radius=10, bg_color="#fafafa", fg_color="#2d435b", hover_color="#fdbf38", text_color="white",
+                         width=230, height=200, border_width=0, command= lambda : change(scpa,docpage))
+    doc_bt_win=scpa.create_window(1060,200-10,anchor="nw",window=doc_bt)
+
     root.mainloop()
 
 def firstpage() :
