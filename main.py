@@ -92,6 +92,13 @@ def secondpage():
                          width=230, height=200, border_width=0, command= lambda : change(scpa,docpage))
     doc_bt_win=scpa.create_window(1060,200-10,anchor="nw",window=doc_bt)
 
+    # College page window
+    coll=Imgo( os.path.join( os.getcwd(), "Images\\college.jpg"),220,170)
+    coll_bt=ctk.CTkButton(master=root,image=coll, text="College Fees", text_font=("Book Antiqua",22,"bold"), compound="top",
+                         corner_radius=10, bg_color="#fafafa", fg_color="#2d435b", hover_color="#fdbf38", text_color="white",
+                         width=230, height=200, border_width=0, command=lambda : change(scpa,collpage))
+    coll_bt_win=scpa.create_window(550,475-10,anchor="nw",window=coll_bt)
+
     root.mainloop()
 
 def firstpage() :
