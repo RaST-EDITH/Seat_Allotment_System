@@ -99,6 +99,13 @@ def secondpage():
                          width=230, height=200, border_width=0, command=lambda : change(scpa,collpage))
     coll_bt_win=scpa.create_window(550,475-10,anchor="nw",window=coll_bt)
 
+    # Hostel page window
+    host=Imgo( os.path.join( os.getcwd(), "Images\\hostel.jpg"),220,170)
+    host_bt=ctk.CTkButton(master=root,image=host, text="Hostel Fees", text_font=("Book Antiqua",22,"bold"), compound="top",
+                         corner_radius=10, bg_color="#fafafa", fg_color="#2d435b", hover_color="#fdbf38", text_color="white",
+                         width=230, height=200, border_width=0, command= lambda : change(scpa,hostpage))
+    host_bt_win=scpa.create_window(870,475-10,anchor="nw",window=host_bt)
+
     root.mainloop()
 
 def firstpage() :
