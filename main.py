@@ -59,6 +59,10 @@ def propage() :
     propa=Canvas(root,width=wid,height=hgt,borderwidth=0)
     propa.pack(fill="both",expand=True)
 
+    # Background image
+    back_img=Imgo( os.path.join( os.getcwd(), "Images\\front2c.jpg"),1700,810)
+    propa.create_image(0,0,image=back_img,anchor="nw")
+
     root.mainloop()
 
 def secondpage():
