@@ -106,6 +106,12 @@ def secondpage():
                          width=230, height=200, border_width=0, command= lambda : change(scpa,hostpage))
     host_bt_win=scpa.create_window(870,475-10,anchor="nw",window=host_bt)
 
+    # Logout button
+    logout_bt=ctk.CTkButton(master=root, text="Log Out", text_font=("Book Antiqua",22,"bold"),  width=30, height=20, corner_radius=10,
+                         fg_color="red", hover_color="#ff5359", bg_color="#fafafa",border_width=0,
+                         command=lambda : change(scpa,firstpage))
+    logout_bt_win=scpa.create_window(760,750-10,anchor="nw",window=logout_bt)
+
     root.mainloop()
 
 def firstpage() :
