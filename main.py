@@ -50,6 +50,17 @@ def compare_rec(app_no,pw_dob) :
     else :
         hel()
 
+def propage() :
+
+    # Managing data
+    wb=oxl.load_workbook( os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx") )
+    ws=wb["Sheet1"]
+
+    propa=Canvas(root,width=wid,height=hgt,borderwidth=0)
+    propa.pack(fill="both",expand=True)
+
+    root.mainloop()
+
 def secondpage():
 
     global scpa
