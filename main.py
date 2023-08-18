@@ -63,6 +63,12 @@ def propage() :
     back_img=Imgo( os.path.join( os.getcwd(), "Images\\front2c.jpg"),1700,810)
     propa.create_image(0,0,image=back_img,anchor="nw")
 
+    # Back button
+    back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10,  corner_radius=10,
+                        fg_color="red", hover_color="#ff5359", bg_color="#fafafa", text_color="#f9f9f9", border_width=0,
+                        command= lambda : change(propa,secondpage))
+    back_bt_win=propa.create_window(20,15,anchor="nw",window=back_bt)
+
     root.mainloop()
 
 def secondpage():
