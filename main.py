@@ -77,6 +77,11 @@ def propage() :
     propa.create_text(590,150,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
     propa.create_text(700,150,text=ws[f"B{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
 
+    # JEE Rank
+    propa.create_text(300,200,text="JEE Rank",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(590,200,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(700,200,text=ws[f"H{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
+
     root.mainloop()
 
 def secondpage():
