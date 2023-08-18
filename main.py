@@ -69,6 +69,14 @@ def propage() :
                         command= lambda : change(propa,secondpage))
     back_bt_win=propa.create_window(20,15,anchor="nw",window=back_bt)
 
+    # Heading
+    propa.create_text(750,50,text="Profile",font=("Book Antiqua",30,"bold","underline"),anchor="nw",fill="#ff512a")
+
+    # Roll no
+    propa.create_text(300,150,text="Roll No",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(590,150,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(700,150,text=ws[f"B{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
+
     root.mainloop()
 
 def secondpage():
