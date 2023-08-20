@@ -92,6 +92,11 @@ def propage() :
     propa.create_text(590,300,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
     propa.create_text(700,300,text=ws[f"D{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
 
+    # Mobile no
+    propa.create_text(300,350,text="Mobile No",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(590,350,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(700,350,text=ws[f"G{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
+
     root.mainloop()
 
 def secondpage():
