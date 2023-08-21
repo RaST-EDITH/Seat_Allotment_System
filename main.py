@@ -97,6 +97,11 @@ def propage() :
     propa.create_text(590,350,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
     propa.create_text(700,350,text=ws[f"G{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
 
+    # DOB
+    propa.create_text(300,400,text="Date Of Birth",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(590,400,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(700,400,text=ws[f"L{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
+
     root.mainloop()
 
 def secondpage():
