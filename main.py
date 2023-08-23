@@ -107,6 +107,11 @@ def propage() :
     propa.create_text(590,450,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
     propa.create_text(700,450,text=ws[f"F{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
 
+    # 10th marks
+    propa.create_text(300,500,text="10th Marks",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(590,500,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(700,500,text=ws[f"I{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
+
     root.mainloop()
 
 def secondpage():
