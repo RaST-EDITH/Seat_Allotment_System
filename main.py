@@ -122,6 +122,11 @@ def propage() :
     propa.create_text(590,600,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
     propa.create_text(700,600,text=ws[f"E{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
 
+    # Mail ID
+    propa.create_text(300,650,text="Mail ID",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(590,650,text=":",font=("Book Antiqua",22,"bold"),anchor="nw",fill="black")
+    propa.create_text(700,650,text=ws[f"K{rec}"].value,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
+
     root.mainloop()
 
 def secondpage():
