@@ -129,6 +129,17 @@ def propage() :
 
     root.mainloop()
 
+def docpage() :
+
+    # Defining Structure
+    docpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
+    docpa.pack(fill="both",expand=True)
+
+    # Heading
+    docpa.create_text(450,65,text="Documents Require For Counselling",font=("Book Antiqua",30,"bold","underline"),
+                        anchor="nw",fill="#ff512a")
+
+    root.mainloop()
 def secondpage():
 
     global scpa
