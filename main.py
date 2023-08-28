@@ -143,6 +143,16 @@ def docpage() :
     docpa.create_text(450,65,text="Documents Require For Counselling",font=("Book Antiqua",30,"bold","underline"),
                         anchor="nw",fill="#ff512a")
 
+    # File handling
+    with open("coun_doc.txt") as myfile:
+        fees_info=myfile.readlines()
+
+    # Table Structure and data
+    c1,c2,c3=colfee(fees_info,15)
+    docpa.create_text(250,160, text=c1, font=("Book Antiqua",20,"bold"), anchor="nw", fill="#f9f9f9")
+    docpa.create_text(430,160, text=c2, font=("Book Antiqua",20,"bold"), anchor="nw", fill="#f9f9f9")
+    docpa.create_text(1210,160,text=c3, font=("Book Antiqua",20,"bold"), anchor="nw", fill="#f9f9f9")
+
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10,corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#eaeaea", text_color="#f9f9f9", border_width=0,
