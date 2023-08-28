@@ -135,11 +135,16 @@ def docpage() :
     docpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
     docpa.pack(fill="both",expand=True)
 
+    # Background Image
+    back_img=Imgo( os.path.join( os.getcwd(), "Background\\front2e.jpg"),1700,810)
+    docpa.create_image(0,0,image=back_img,anchor="nw")
+
     # Heading
     docpa.create_text(450,65,text="Documents Require For Counselling",font=("Book Antiqua",30,"bold","underline"),
                         anchor="nw",fill="#ff512a")
 
     root.mainloop()
+
 def secondpage():
 
     global scpa
