@@ -143,6 +143,12 @@ def docpage() :
     docpa.create_text(450,65,text="Documents Require For Counselling",font=("Book Antiqua",30,"bold","underline"),
                         anchor="nw",fill="#ff512a")
 
+    # Back button
+    back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10,corner_radius=10,
+                        fg_color="red", hover_color="#ff5359", bg_color="#eaeaea", text_color="#f9f9f9", border_width=0,
+                        command= lambda : change(docpa,secondpage))
+    back_bt_win=docpa.create_window(20,15,anchor="nw",window=back_bt)
+
     root.mainloop()
 
 def secondpage():
