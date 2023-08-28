@@ -50,6 +50,23 @@ def compare_rec(app_no,pw_dob) :
     else :
         hel()
 
+def colfee(data,x) :
+
+    # Table of collage fee data
+    s,f,c=[],[],[]
+    for i in range(2,x) :
+        a=data[i].split("-")
+        s.append(a[0])
+        f.append(a[1])
+        c.append(a[2])
+    dic={s[0]:s[1:]}
+    c1=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    dic={f[0]:f[1:]}
+    c2=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    dic={c[0]:c[1:]}
+    c3=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    return c1,c2,c3
+
 def propage() :
 
     # Managing data
