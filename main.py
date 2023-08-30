@@ -180,8 +180,19 @@ def docpage() :
 
 def collpage() :
 
-    collpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
-    collpa.pack(fill="both",expand=True)
+    # Background Image
+    back_img=Imgo("front2f.jpg",1700,810)
+    collpa.create_image(0,0,image=back_img,anchor="nw")
+
+    # Heading
+    collpa.create_text(480,65,text="JSS FEE OF I YEAR, 2022-23 BATCH",
+                       font=("Book Antiqua",28,"bold","underline"), anchor="nw", fill="#ff512a")
+
+    # Back button
+    back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20), width=20, height=10, corner_radius=10,
+                         fg_color="red", hover_color="#ff5359", bg_color="#fafafa", text_color="#f9f9f9", border_width=0,
+                         command= lambda : change(collpa,secondpage))
+    back_bt_win=collpa.create_window(20,15,anchor="nw",window=back_bt)
 
     root.mainloop()
 
