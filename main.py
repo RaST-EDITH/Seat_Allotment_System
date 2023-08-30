@@ -180,6 +180,10 @@ def docpage() :
 
 def collpage() :
 
+    # File handling
+    with open("fees_detail.txt") as myfile :
+        fees_info=myfile.readlines()
+
     # Background Image
     back_img=Imgo("front2f.jpg",1700,810)
     collpa.create_image(0,0,image=back_img,anchor="nw")
@@ -187,6 +191,7 @@ def collpage() :
     # Heading
     collpa.create_text(480,65,text="JSS FEE OF I YEAR, 2022-23 BATCH",
                        font=("Book Antiqua",28,"bold","underline"), anchor="nw", fill="#ff512a")
+    c1,c2,c3=colfee(fees_info,11)
 
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20), width=20, height=10, corner_radius=10,
