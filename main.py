@@ -178,6 +178,13 @@ def docpage() :
 
     root.mainloop()
 
+def collpage() :
+
+    collpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
+    collpa.pack(fill="both",expand=True)
+
+    root.mainloop()
+
 def secondpage():
 
     global scpa
