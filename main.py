@@ -203,6 +203,10 @@ def collpage() :
     collpa.create_text(280,640,text="Demand Draft in favour of ",font=("Book Antiqua",18),anchor="nw",fill="white")
     collpa.create_text(645,640,text="*JSSATE MANAGEMENT A/C*",font=("Book Antiqua",18,"bold"),anchor="nw",fill="white")
     collpa.create_text(1095,640,text="Payable at Noida / New Delhi",font=("Book Antiqua",18),anchor="nw",fill="white")
+
+    #Account No
+    collpa.create_text(280,690,text="Account No. -",font=("Book Antiqua",18,"bold","underline"),anchor="nw",fill="white")
+    collpa.create_text(480,690,text=" 520101236640492",font=("Book Antiqua",18),anchor="nw",fill="white")
     
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20), width=20, height=10, corner_radius=10,
