@@ -212,6 +212,10 @@ def collpage() :
     collpa.create_text(930,690,text="IFSC Code -",font=("Book Antiqua",18,"bold","underline"),anchor="nw",fill="white")
     collpa.create_text(1110,690,text=" UBIN0920797",font=("Book Antiqua",18),anchor="nw",fill="white")
 
+    #Bank Name
+    collpa.create_text(280,740,text="Bank Name -",font=("Book Antiqua",18,"bold","underline"),anchor="nw",fill="white")
+    collpa.create_text(480,740,text=" UNION BANK OF INDIA",font=("Book Antiqua",18),anchor="nw",fill="white")
+
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20), width=20, height=10, corner_radius=10,
                          fg_color="red", hover_color="#ff5359", bg_color="#fafafa", text_color="#f9f9f9", border_width=0,
