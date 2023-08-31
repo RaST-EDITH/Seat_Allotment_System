@@ -198,6 +198,12 @@ def collpage() :
     collpa.create_text(450,160,text=c2,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
     collpa.create_text(1200,160,text=c3,font=("Book Antiqua",20,"bold"),anchor="nw",fill="white")
 
+    #Payment Mode
+    collpa.create_text(250,580,text="MODE OF PAYMENT -",font=("Book Antiqua",22,"bold","underline"),anchor="nw",fill="white")
+    collpa.create_text(280,640,text="Demand Draft in favour of ",font=("Book Antiqua",18),anchor="nw",fill="white")
+    collpa.create_text(645,640,text="*JSSATE MANAGEMENT A/C*",font=("Book Antiqua",18,"bold"),anchor="nw",fill="white")
+    collpa.create_text(1095,640,text="Payable at Noida / New Delhi",font=("Book Antiqua",18),anchor="nw",fill="white")
+    
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20), width=20, height=10, corner_radius=10,
                          fg_color="red", hover_color="#ff5359", bg_color="#fafafa", text_color="#f9f9f9", border_width=0,
