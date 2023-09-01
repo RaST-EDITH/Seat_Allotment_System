@@ -237,6 +237,11 @@ def hostpage() :
     hostpa.create_text(370,80,text="JSS HOSTEL FEE OF I YEAR, 2022-23 BATCH",font=("Book Antiqua",28,"bold","underline"),
                        anchor="nw",fill="#ff512a")
 
+    # File handlling
+    with open("fees_detail.txt") as myfile :
+        fees_info=myfile.readlines()
+    c1,c2,c3,c4,c5=hostfee(fees_info)
+    
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                       fg_color="red", hover_color="#ff5359", bg_color="#ebebeb",text_color="#f9f9f9", border_width=0,
