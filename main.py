@@ -229,10 +229,14 @@ def hostpage() :
     hostpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
     hostpa.pack(fill="both",expand=True)
 
+    # Background image
+    back_img=Imgo( os.path.join( os.getcwd(), "Background\\front2g.jpg"),1700,810)
+    hostpa.create_image(0,0,image=back_img,anchor="nw")
+
     # Heading of page
     hostpa.create_text(370,80,text="JSS HOSTEL FEE OF I YEAR, 2022-23 BATCH",font=("Book Antiqua",28,"bold","underline"),
                        anchor="nw",fill="#ff512a")
-    
+
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                       fg_color="red", hover_color="#ff5359", bg_color="#ebebeb",text_color="#f9f9f9", border_width=0,
