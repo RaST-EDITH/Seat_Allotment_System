@@ -224,6 +224,13 @@ def collpage() :
 
     root.mainloop()
 
+def hostpage() :
+
+    hostpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
+    hostpa.pack(fill="both",expand=True)
+
+    root.mainloop()
+
 def secondpage():
 
     global scpa
