@@ -1,0 +1,19 @@
+COLLAGE FEES
+
+S.NO-Field-Charges
+1-Tution Fee-1,12,850.00
+2-24*7 WiFi Access Code (One Time)-6,000.00
+3-Book Bank Scheme (One Time)-5,000.00
+4-Security Deposite (One Time)-8,000.00
+5-Miscellaneous Fee per year-3,000.00
+6-Accidental Group Insurance-500.00
+7-Personality Development Fee-1,000.00
+ -Total-1,37,850.00
+
+HOSTEL FEES
+
+Hostel Name-Hostel Charges-Mess Charges-Security-Total
+ISH (For Boys)-96,000.00-33,500.00-3,000.00-1,32,500
+Boys Hostel-60,000.00-33,500.00-3,000.00-96,500.00
+Girls Hostel-60,000.00-32,500.00-3,000.00-95,500.00
+Girls AC Hostel-90,000.00-32,500.00-3,000.00-1,25,500.00
