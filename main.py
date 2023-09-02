@@ -161,7 +161,7 @@ def docpage() :
                         anchor="nw",fill="#ff512a")
 
     # File handling
-    with open("coun_doc.txt") as myfile:
+    with open( os.path.join( os.getcwd(), "Data_Files\\coun_doc.txt") ) as myfile:
         fees_info=myfile.readlines()
 
     # Table Structure and data
@@ -181,7 +181,7 @@ def docpage() :
 def collpage() :
 
     # File handling
-    with open("fees_detail.txt") as myfile :
+    with open( os.path.join( os.getcwd(), "Data_Files\\fees_detail.txt") ) as myfile:
         fees_info=myfile.readlines()
 
     # Background Image
@@ -238,7 +238,7 @@ def hostpage() :
                        anchor="nw",fill="#ff512a")
 
     # File handlling
-    with open("fees_detail.txt") as myfile :
+    with open( os.path.join( os.getcwd(), "Data_Files\\fees_detail.txt") ) as myfile:
         fees_info=myfile.readlines()
     c1,c2,c3,c4,c5=hostfee(fees_info)
     
