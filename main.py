@@ -249,6 +249,13 @@ def hostpage() :
     hostpa.create_text(1080,220,text=c4,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
     hostpa.create_text(1280,220,text=c5,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
     
+    # Defining details
+    hostpa.create_text(200,525,text="MODE OF PAYMENT : Only Through Demand Draft",font=("Book Antiqua",22,"bold","underline"),
+                        anchor="nw",fill="white")
+    hostpa.create_text(230,580,text="Demand Draft in favour of *JSSATE - Hostel Establishment A/C*",font=("Book Antiqua",22),
+                        anchor="nw",fill="white")
+    hostpa.create_text(230,620,text="Payable at Noida / New Delhi",font=("Book Antiqua",22),anchor="nw",fill="white")
+
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                       fg_color="red", hover_color="#ff5359", bg_color="#ebebeb",text_color="#f9f9f9", border_width=0,
