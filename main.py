@@ -242,6 +242,13 @@ def hostpage() :
         fees_info=myfile.readlines()
     c1,c2,c3,c4,c5=hostfee(fees_info)
     
+    # Structure of data
+    hostpa.create_text(200,220,text=c1,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
+    hostpa.create_text(500,220,text=c2,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
+    hostpa.create_text(800,220,text=c3,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
+    hostpa.create_text(1080,220,text=c4,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
+    hostpa.create_text(1280,220,text=c5,font=("Book Antiqua",22,"bold"),anchor="nw",fill="white")
+    
     # Back button
     back_bt=ctk.CTkButton(master=root, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                       fg_color="red", hover_color="#ff5359", bg_color="#ebebeb",text_color="#f9f9f9", border_width=0,
