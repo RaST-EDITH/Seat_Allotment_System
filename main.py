@@ -78,6 +78,17 @@ def hostfee(data) :
         mc.append(a[2])
         sc.append(a[3])
         to.append(a[4])
+    dic={hn[0]:hn[1:]}
+    c1=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    dic={hc[0]:hc[1:]}
+    c2=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    dic={mc[0]:mc[1:]}
+    c3=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    dic={sc[0]:sc[1:]}
+    c4=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    dic={to[0]:to[1:]}
+    c5=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
+    return c1,c2,c3,c4,c5
 
 def propage() :
 
