@@ -67,6 +67,18 @@ def colfee(data,x) :
     c3=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
     return c1,c2,c3
 
+def hostfee(data) :
+
+    # Table of hostel fee data
+    hn,hc,mc,sc,to=[],[],[],[],[]
+    for i in range(14,19) :
+        a=data[i].split("-")
+        hn.append(a[0])
+        hc.append(a[1])
+        mc.append(a[2])
+        sc.append(a[3])
+        to.append(a[4])
+
 def propage() :
 
     # Managing data
