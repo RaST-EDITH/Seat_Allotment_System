@@ -175,6 +175,12 @@ def slotpage() :
     slotp=Canvas( slotpa, width=wid, height=hgt, borderwidth=0)
     slotp.pack(fill="both",expand=True)
 
+    # Back button
+    back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
+                        fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
+                        command= lambda : change_slot(slotp,secondpage,slotpa))
+    back_bt_win=slotp.create_window(20,15,anchor="nw",window=back_bt)
+
     root.mainloop()
 
 def docpage() :
