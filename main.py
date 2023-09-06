@@ -169,6 +169,14 @@ def propage() :
 
     root.mainloop()
 
+def slotpage() :
+
+    slotpa = Frame(master=root)
+    slotp=Canvas( slotpa, width=wid, height=hgt, borderwidth=0)
+    slotp.pack(fill="both",expand=True)
+
+    root.mainloop()
+
 def docpage() :
 
     # Defining Structure
