@@ -182,6 +182,10 @@ def slotpage() :
     slotp.create_text(220+100,200, text="Round Alloted :", font=("Book Antiqua",22,"bold"), anchor="nw", fill="#000000")
     slotp.create_text(620+420,200, text=ws2[f"B{rec}"].value, font=("Book Antiqua",22,"bold"), anchor="nw", fill="#f9f9f9")
 
+    # Date label
+    slotp.create_text(220+100,275, text="Choose A Date out of following -", font=("Book Antiqua",22,"bold","underline"), anchor="nw", fill="black")
+    slotp.create_text(220+100,350, text="Select Date :", font=("Book Antiqua",22,"bold"), anchor="nw", fill="black")
+
     # Back button
     back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
