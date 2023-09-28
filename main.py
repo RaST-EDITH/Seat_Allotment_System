@@ -186,6 +186,12 @@ def slotpage() :
     slotp.create_text(220+100,275, text="Choose A Date out of following -", font=("Book Antiqua",22,"bold","underline"), anchor="nw", fill="black")
     slotp.create_text(220+100,350, text="Select Date :", font=("Book Antiqua",22,"bold"), anchor="nw", fill="black")
 
+    # Slot label
+    slotp.create_text(220+100,425, text="Choose a time slot for Counselling -", font=("Book Antiqua",22,"bold","underline"), anchor="nw", fill="black")
+    slotp.create_text(220+100,500, text="Select Time Slot :", font=("Book Antiqua",22,"bold"), anchor="nw", fill="black")
+
+    choose_date , time1 , time2 = limit_check()
+
     # Back button
     back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
