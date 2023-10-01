@@ -171,9 +171,28 @@ def propage() :
 
 def slotpage() :
 
+    # Defining variables
+    global date_drop
+    global slot_drop
+    global save_bt
+    global slotp
+    global slotpa
+    global choose_date
+    global time1
+    global time2
+
+    # Managing file
+    wb=oxl.load_workbook("Data_Files\\student_data.xlsx")
+    ws2=wb["Sheet2"]
+    ws3=wb["Sheet3"]
+
     slotpa = Frame(master=root)
     slotp=Canvas( slotpa, width=wid, height=hgt, borderwidth=0)
     slotp.pack(fill="both",expand=True)
+
+    # Background image
+    back_img=Imgo( os.path.join( os.getcwd(), "Background\\front2d.jpg"),1700,810)
+    slotp.create_image(0,0,image=back_img,anchor="nw")
 
     # Heading
     slotp.create_text(700,65, text="Slot Booking", font=("Book Antiqua",28,"bold","underline"), anchor="nw", fill="#ff512a")
