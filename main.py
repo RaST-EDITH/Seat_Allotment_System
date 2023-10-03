@@ -232,6 +232,12 @@ def slotpage() :
         slot_menu.config(bg="#ffda82", font=("Book Antiqua",15,"bold"), activebackground="#ff512a" )
         slot_drop.place_configure(x=750+180,y=500,anchor="nw")
 
+        # Save button
+        save_bt=ctk.CTkButton(master=slotpa, text="SAVE", text_font=("Helvetica",20),  width=30, height=20, corner_radius=10,
+                         fg_color="red", hover_color="#ff5359", bg_color="#fafafa",border_width=0,
+                         command=lambda : slot_booked(date_var.get() , slot_var.get() , slotp))
+        save_bt_win=slotp.create_window(800,640,anchor="nw",window=save_bt)
+
     # Back button
     back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
