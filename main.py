@@ -211,6 +211,17 @@ def slotpage() :
 
     choose_date , time1 , time2 = limit_check()
 
+    if ws2[f"C{rec}"].value == None :
+
+        # Drop menu for choosing date
+        date_var = StringVar()
+        date_var.set("Choose Date")
+        date_drop = OptionMenu(slotpa, date_var, *choose_date)
+        date_drop.config(width=15, bg="#ffc234", activebackground="#ff512a", activeforeground="white", font=("Book Antiqua",15,"bold"))
+        date_menu = slotpa.nametowidget(date_drop.menuname) 
+        date_menu.config(bg="#ffda82", font=("Book Antiqua",15,"bold"), activebackground="#ff512a")
+        date_drop.place_configure(x=750+180,y=350,anchor="nw")
+    
     # Back button
     back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
