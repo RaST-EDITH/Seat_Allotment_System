@@ -248,6 +248,14 @@ def slotpage() :
         date_drop.place_configure(x=750+180,y=350,anchor="nw")
         date_drop.config(state="disable")
 
+        # Drop menu for choosing slot
+        slot_var = StringVar()
+        slot_var.set(ws2[f"D{rec}"].value)
+        slot_drop = OptionMenu(slotp, slot_var, ws2[f"D{rec}"].value)
+        slot_drop.config(width=15, bg="#ffc234", font=("Book Antiqua",15,"bold"))
+        slot_drop.place_configure(x=750+180,y=500,anchor="nw")
+        slot_drop.config(state="disable")
+
     # Back button
     back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
