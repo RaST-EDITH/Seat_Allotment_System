@@ -256,6 +256,13 @@ def slotpage() :
         slot_drop.place_configure(x=750+180,y=500,anchor="nw")
         slot_drop.config(state="disable")
 
+        # Message
+        slotp.create_text(230,630, text="*Slot has been booked sucessfully. No further changes are possible.*",
+                        font=("Book Antiqua",22,"bold"), anchor="nw", fill="black")
+    
+    slotpa.pack(padx=0, pady=0, anchor="nw", fill = BOTH, expand = True )
+    wb.save("Data_Files\\student_data.xlsx")
+
     # Back button
     back_bt=ctk.CTkButton(master=slotpa, text="BACK", text_font=("Helvetica",20),  width=20, height=10, corner_radius=10,
                         fg_color="red", hover_color="#ff5359", bg_color="#ebebeb", text_color="#f9f9f9", border_width=0,
