@@ -90,6 +90,17 @@ def hostfee(data) :
     c5=tabulate(dic,headers="keys",tablefmt="flat",colalign=['left'])
     return c1,c2,c3,c4,c5
 
+def row_check(a) :
+
+    # Function to find a position
+    wb=oxl.load_workbook("student_data.xlsx")
+    ws2=wb["Sheet2"]
+    ws3=wb["Sheet3"]
+    x=ws2[f"B{a}"].value
+    for i in range(2,14) :
+        if ws3[f"B{i}"].value == x :
+            return i
+
 def propage() :
 
     # Managing data
