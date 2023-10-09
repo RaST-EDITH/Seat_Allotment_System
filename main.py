@@ -101,6 +101,27 @@ def row_check(a) :
         if ws3[f"B{i}"].value == x :
             return i
 
+def slot_booked( date, slot, can) :
+
+    # Function to allot a slot
+    global row 
+    global col
+    wb=oxl.load_workbook("student_data.xlsx")
+    ws2=wb["Sheet2"]
+    ws3=wb["Sheet3"]
+
+    if (date == choose_date[0]) and (slot in time1) :
+
+        for i in range(2,14) :
+            if ws3[f"A{i}"].value == date :
+                row=i
+                break
+
+        for sl in ["C","D","E","F"] :
+            if ws3[f"{sl}1"].value == slot :
+                col=sl
+                break
+
 def propage() :
 
     # Managing data
