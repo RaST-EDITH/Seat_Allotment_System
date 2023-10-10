@@ -121,6 +121,18 @@ def slot_booked( date, slot, can) :
             if ws3[f"{sl}1"].value == slot :
                 col=sl
                 break
+        
+        x = ws3[f"{col}{row}"]
+        x.value = x.value+1
+        y = ws2[f"C{rec}"]
+        y.value = ws3[f"A{row}"].value
+        z = ws2[f"D{rec}"]
+        z.value = ws3[f"{col}1"].value
+        wb.save("student_data.xlsx")
+        date_drop.config(state="disable")
+        slot_drop.config(state="disable")
+        bg="#ffbd8e"
+        change_slot(slotp,secondpage,slotpa)
 
 def propage() :
 
