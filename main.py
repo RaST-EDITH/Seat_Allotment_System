@@ -133,6 +133,17 @@ def slot_booked( date, slot, can) :
         slot_drop.config(state="disable")
         bg="#ffbd8e"
         change_slot(slotp,secondpage,slotpa)
+    
+    elif (date == choose_date[1]) and (slot in time2) :
+        for i in range(2,14) :
+            if ws3[f"A{i}"].value == date :
+                row=i
+                break
+
+        for sl in ["C","D","E","F"] :
+            if ws3[f"{sl}1"].value == slot :
+                col=sl
+                break
 
 def propage() :
 
