@@ -159,6 +159,30 @@ def slot_booked( date, slot, can) :
     else :
         not_allow()
 
+def limit_check() :
+
+    # Function to get avaliable time
+    rd_pst = row_check(rec)
+    wb=oxl.load_workbook("student_data.xlsx")
+    ws2=wb["Sheet2"]
+    ws3=wb["Sheet3"]
+    date_lst = []
+    time1_lst = []
+    time2_lst = []
+
+    for sl in ["C","D","E","F"] :
+
+        if ws3[f"{sl}{rd_pst}"].value < 15 :
+
+            ele_1 = ws3[f"{sl}1"].value
+            ele_2 = ws3[f"A{rd_pst}"].value
+
+            if time1_lst.count(ele_1) == 0 :
+                time1_lst.append(ele_1)
+            
+            if date_lst.count(ele_2) == 0 :
+                date_lst.append(ele_2)
+
 def propage() :
 
     # Managing data
