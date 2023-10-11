@@ -182,6 +182,19 @@ def limit_check() :
             
             if date_lst.count(ele_2) == 0 :
                 date_lst.append(ele_2)
+        
+        if ws3[f"{sl}{rd_pst+1}"].value < 15 :
+
+            ele_3 = ws3[f"{sl}1"].value
+            ele_4 = ws3[f"A{rd_pst+1}"].value
+            
+            if time2_lst.count(ele_3) == 0 :
+                time2_lst.append(ele_3)
+
+            if date_lst.count(ele_4) == 0 :
+                date_lst.append(ele_4)
+    
+    return date_lst , time1_lst , time2_lst
 
 def propage() :
 
