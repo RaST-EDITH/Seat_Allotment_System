@@ -93,7 +93,7 @@ def hostfee(data) :
 def row_check(a) :
 
     # Function to find a position
-    wb=oxl.load_workbook("student_data.xlsx")
+    wb=oxl.load_workbook(os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx"))
     ws2=wb["Sheet2"]
     ws3=wb["Sheet3"]
     x=ws2[f"B{a}"].value
@@ -106,7 +106,7 @@ def slot_booked( date, slot, can) :
     # Function to allot a slot
     global row 
     global col
-    wb=oxl.load_workbook("student_data.xlsx")
+    wb=oxl.load_workbook(os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx"))
     ws2=wb["Sheet2"]
     ws3=wb["Sheet3"]
 
@@ -128,7 +128,7 @@ def slot_booked( date, slot, can) :
         y.value = ws3[f"A{row}"].value
         z = ws2[f"D{rec}"]
         z.value = ws3[f"{col}1"].value
-        wb.save("student_data.xlsx")
+        wb.save("Data_Files\\student_data.xlsx")
         date_drop.config(state="disable")
         slot_drop.config(state="disable")
         bg="#ffbd8e"
@@ -151,7 +151,7 @@ def slot_booked( date, slot, can) :
         y.value = ws3[f"A{row}"].value
         z = ws2[f"D{rec}"]
         z.value = ws3[f"{col}1"].value
-        wb.save("student_data.xlsx")
+        wb.save("Data_Files\\student_data.xlsx")
         date_drop.config(state="disable")
         slot_drop.config(state="disable")
         change_slot(slotp,secondpage,slotpa)
@@ -163,7 +163,7 @@ def limit_check() :
 
     # Function to get avaliable time
     rd_pst = row_check(rec)
-    wb=oxl.load_workbook("student_data.xlsx")
+    wb=oxl.load_workbook(os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx"))
     ws2=wb["Sheet2"]
     ws3=wb["Sheet3"]
     date_lst = []
@@ -288,7 +288,7 @@ def slotpage() :
     global time2
 
     # Managing file
-    wb=oxl.load_workbook("Data_Files\\student_data.xlsx")
+    wb=oxl.load_workbook(os.path.join( os.getcwd(), "Data_Files\\student_data.xlsx"))
     ws2=wb["Sheet2"]
     ws3=wb["Sheet3"]
 
