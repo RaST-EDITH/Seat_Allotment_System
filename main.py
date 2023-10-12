@@ -30,6 +30,13 @@ def not_allow() :
     # Pop up window
     showerror(title="Info",message="SLOT FULL")
 
+def change_slot(can,page,frm) :
+
+    # Switching root widgets
+    can.destroy()
+    frm.destroy()
+    page()
+
 def compare_rec(app_no,pw_dob) :
 
     # Comparing ID and password
@@ -206,7 +213,7 @@ def propage() :
     propa.pack(fill="both",expand=True)
 
     # Background image
-    back_img=Imgo( os.path.join( os.getcwd(), "Images\\front2c.jpg"),1700,810)
+    back_img=Imgo( os.path.join( os.getcwd(), "Background\\front2c.jpg"),1700,810)
     propa.create_image(0,0,image=back_img,anchor="nw")
 
     # Back button
@@ -410,6 +417,9 @@ def docpage() :
     root.mainloop()
 
 def collpage() :
+
+    collpa=Canvas(root,width=wid,height=hgt,borderwidth=0)
+    collpa.pack(fill="both",expand=True)
 
     # File handling
     with open( os.path.join( os.getcwd(), "Data_Files\\fees_detail.txt") ) as myfile:
