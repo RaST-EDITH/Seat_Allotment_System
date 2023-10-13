@@ -1,0 +1,5 @@
+Pillow==9.3.0
+Tabulate==0.8.10
+openpyxl==3.0.10
+customtkinter==4.6.3
+tkinter==8.6
